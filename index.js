@@ -54,7 +54,7 @@ module.exports = function gulpSvelte(...args) {
 
       try {
         //result = compile(file.contents.toString(), Object.assign({filename: file.path}, ...args));
-        result = compile(file.contents.toString(), objectAssign(
+        result = compile(file.contents.toString(), Object.assign(
           {filename: file.path, name: file.path && getName(file.path)},
           ...args
         ));
